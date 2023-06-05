@@ -1,36 +1,240 @@
-  macro_quotes: macro_quotes {
-    compatible = "zmk,behavior-macro";
-    label = "macro_quotes";
-    #binding-cells = <0>;
-    bindings = <&kp SQT>, <&kp SQT>, <&kp LEFT>;
-  };
-  macro_dquotes: macro_dquotes {
-    compatible = "zmk,behavior-macro";
-    label = "macro_dquotes";
-    #binding-cells = <0>;
-    bindings = <&kp DQT>, <&kp DQT>, <&kp LEFT>;
-  };
-  macro_braces: macro_braces {
-    compatible = "zmk,behavior-macro";
-    label = "macro_braces";
-    #binding-cells = <0>;
-    bindings = <&kp LBRC>, <&kp RBRC>, <&kp LEFT>;
-  };
-  macro_parens: macro_parens {
-    compatible = "zmk,behavior-macro";
-    label = "macro_parens";
-    #binding-cells = <0>;
-    bindings = <&kp LPAR>, <&kp RPAR>, <&kp LEFT>;
-  };
-  macro_brackets: macro_brackets {
-    compatible = "zmk,behavior-macro";
-    label = "macro_brackets";
-    #binding-cells = <0>;
-    bindings = <&kp LBKT>, <&kp RBKT>, <&kp LEFT>;
-  };
-  macro_kinesis: macro_kinesis {
-    compatible = "zmk,behavior-macro";
-    label = "macro_kinesis";
-    #binding-cells = <0>;
-    bindings = <&kp LS(K)>, <&kp I>, <&kp N>, <&kp E>, <&kp S>, <&kp I>, <&kp S>;
-  };
+macro_maximize: macro_maximize{
+compatible = "zmk,behavior-macro";
+label = "macro_maximize";
+#binding-cells = <0>;
+bindings = <&kp LC(LA(RETURN))>;
+};
+macro_restore: macro_restore{
+compatible = "zmk,behavior-macro";
+label = "macro_restore";
+#binding-cells = <0>;
+bindings = <&kp LC(LA(BACKSPACE))>;
+};
+macro_center: macro_center{
+compatible = "zmk,behavior-macro";
+label = "macro_center";
+#binding-cells = <0>;
+bindings = <&kp LC(LA(C))>;
+};
+macro_recent_windows: macro_recent_windows{
+compatible = "zmk,behavior-macro";
+label = "macro_recent_windows";
+#binding-cells = <0>;
+bindings = <&kp LC(UP_ARROW)>;
+};
+macro_clipboard: macro_clipboard{
+compatible = "zmk,behavior-macro";
+label = "macro_clipboard";
+#binding-cells = <0>;
+bindings = <&kp LS(LG(C))>;
+};
+macro_quotes: macro_quotes{
+compatible = "zmk,behavior-macro";
+label = "macro_quotes";
+#binding-cells = <0>;
+bindings = <&kp SQT>, <&kp SQT>, <&kp LEFT>;
+};
+macro_dquotes: macro_dquotes{
+compatible = "zmk,behavior-macro";
+label = "macro_dquotes";
+#binding-cells = <0>;
+bindings = <&kp DQT>, <&kp DQT>, <&kp LEFT>;
+};
+macro_braces: macro_braces{
+compatible = "zmk,behavior-macro";
+label = "macro_braces";
+#binding-cells = <0>;
+bindings = <&kp LBRC>, <&kp RBRC>, <&kp LEFT>;
+};
+macro_parens: macro_parens{
+compatible = "zmk,behavior-macro";
+label = "macro_parens";
+#binding-cells = <0>;
+bindings = <&kp LPAR>, <&kp RPAR>, <&kp LEFT>;
+};
+macro_brackets: macro_brackets{
+compatible = "zmk,behavior-macro";
+label = "macro_brackets";
+#binding-cells = <0>;
+bindings = <&kp LBKT>, <&kp RBKT>, <&kp LEFT>;
+};
+macro_kinesis: macro_kinesis{
+compatible = "zmk,behavior-macro";
+label = "macro_kinesis";
+#binding-cells = <0>;
+bindings = <&kp LS(K)>, <&kp I>, <&kp N>, <&kp E>, <&kp S>, <&kp I>, <&kp S>;
+};
+macro_magnet_righ_5_6: macro_magnet_righ_5_6{
+compatible = "zmk,behavior-macro";
+label = "macro_magnet_righ_5_6";
+#binding-cells = <0>;
+bindings = <&kp LC(LA(DOT))>;
+};
+macro_magnet_left_5_6: macro_magnet_left_5_6{
+compatible = "zmk,behavior-macro";
+label = "macro_magnet_left_5_6";
+#binding-cells = <0>;
+bindings = <&kp LC(LA(COMMA))>;
+};
+macro_magnet_6th_6th: macro_magnet_6th_6th{
+compatible = "zmk,behavior-macro";
+label = "macro_magnet_6th_6th";
+#binding-cells = <0>;
+bindings = <&kp LC(LA(NUMBER_6))>;
+};
+macro_magnet_5th_6th: macro_magnet_5th_6th{
+compatible = "zmk,behavior-macro";
+label = "macro_magnet_5th_6th";
+#binding-cells = <0>;
+bindings = <&kp LC(LA(NUMBER_5))>;
+};
+macro_magnet_4th_6th: macro_magnet_4th_6th{
+compatible = "zmk,behavior-macro";
+label = "macro_magnet_4th_6th";
+#binding-cells = <0>;
+bindings = <&kp LC(LA(NUMBER_4))>;
+};
+macro_magnet_3rd_6th: macro_magnet_3rd_6th{
+compatible = "zmk,behavior-macro";
+label = "macro_magnet_3rd_6th";
+#binding-cells = <0>;
+bindings = <&kp LC(LA(NUMBER_3))>;
+};
+macro_magnet_2nd_6th: macro_magnet_2nd_6th{
+compatible = "zmk,behavior-macro";
+label = "macro_magnet_2nd_6th";
+#binding-cells = <0>;
+bindings = <&kp LC(LA(NUMBER_2))>;
+};
+macro_magnet_1st_6th: macro_magnet_1st_6th{
+compatible = "zmk,behavior-macro";
+label = "macro_magnet_1st_6th";
+#binding-cells = <0>;
+bindings = <&kp LC(LA(NUMBER_1))>;
+};
+macro_magnet_righ_3rd: macro_magnet_righ_3rd{
+compatible = "zmk,behavior-macro";
+label = "macro_magnet_righ_3rd";
+#binding-cells = <0>;
+bindings = <&kp LC(LA(G))>;
+};
+macro_magnet_righ_2_3: macro_magnet_righ_2_3{
+compatible = "zmk,behavior-macro";
+label = "macro_magnet_righ_2_3";
+#binding-cells = <0>;
+bindings = <&kp LC(LA(T))>;
+};
+macro_magnet_center_3: macro_magnet_center_3{
+compatible = "zmk,behavior-macro";
+label = "macro_magnet_center_3";
+#binding-cells = <0>;
+bindings = <&kp LC(LA(F))>;
+};
+macro_magnet_left_2_3: macro_magnet_left_2_3{
+compatible = "zmk,behavior-macro";
+label = "macro_magnet_left_2_3";
+#binding-cells = <0>;
+bindings = <&kp LC(LA(E))>;
+};
+macro_magnet_left_3rd: macro_magnet_left_3rd{
+compatible = "zmk,behavior-macro";
+label = "macro_magnet_left_3rd";
+#binding-cells = <0>;
+bindings = <&kp LC(LA(D))>;
+};
+macro_magnet_bot_righ: macro_magnet_bot_righ{
+compatible = "zmk,behavior-macro";
+label = "macro_magnet_bot_righ";
+#binding-cells = <0>;
+bindings = <&kp LC(LA(K))>;
+};
+macro_magnet_bot_left: macro_magnet_bot_left{
+compatible = "zmk,behavior-macro";
+label = "macro_magnet_bot_left";
+#binding-cells = <0>;
+bindings = <&kp LC(LA(J))>;
+};
+macro_magnet_top_righ: macro_magnet_top_righ{
+compatible = "zmk,behavior-macro";
+label = "macro_magnet_top_righ";
+#binding-cells = <0>;
+bindings = <&kp LC(LA(I))>;
+};
+macro_magnet_top_left: macro_magnet_top_left{
+compatible = "zmk,behavior-macro";
+label = "macro_magnet_top_left";
+#binding-cells = <0>;
+bindings = <&kp LC(LA(U))>;
+};
+macro_magnet_down: macro_magnet_down{
+compatible = "zmk,behavior-macro";
+label = "macro_magnet_down";
+#binding-cells = <0>;
+bindings = <&kp LC(LA(DOWN))>;
+};
+macro_magnet_up: macro_magnet_up{
+compatible = "zmk,behavior-macro";
+label = "macro_magnet_up";
+#binding-cells = <0>;
+bindings = <&kp LC(LA(UP))>;
+};
+macro_magnet_right: macro_magnet_right{
+compatible = "zmk,behavior-macro";
+label = "macro_magnet_right";
+#binding-cells = <0>;
+bindings = <&kp LC(LA(RIGHT))>;
+};
+macro_magnet_left: macro_magnet_left{
+compatible = "zmk,behavior-macro";
+label = "macro_magnet_left";
+#binding-cells = <0>;
+bindings = <&kp LC(LA(LEFT))>;
+};
+macro_warp: macro_warp{
+compatible = "zmk,behavior-macro";
+label = "macro_warp";
+#binding-cells = <0>;
+bindings = <&kp LS(LC(LG(W)))>;
+};
+macro_zen: macro_zen{
+compatible = "zmk,behavior-macro";
+label = "macro_zen";
+#binding-cells = <0>;
+bindings = <&kp LS(LG(H))>;
+};
+macro_quotes: macro_quotes{
+compatible = "zmk,behavior-macro";
+label = "macro_quotes";
+#binding-cells = <0>;
+bindings = <&kp SQT>, <&kp SQT>, <&kp LEFT>;
+};
+macro_dquotes: macro_dquotes{
+compatible = "zmk,behavior-macro";
+label = "macro_dquotes";
+#binding-cells = <0>;
+bindings = <&kp DQT>, <&kp DQT>, <&kp LEFT>;
+};
+macro_braces: macro_braces{
+compatible = "zmk,behavior-macro";
+label = "macro_braces";
+#binding-cells = <0>;
+bindings = <&kp LBRC>, <&kp RBRC>, <&kp LEFT>;
+};
+macro_parens: macro_parens{
+compatible = "zmk,behavior-macro";
+label = "macro_parens";
+#binding-cells = <0>;
+bindings = <&kp LPAR>, <&kp RPAR>, <&kp LEFT>;
+};
+macro_brackets: macro_brackets{
+compatible = "zmk,behavior-macro";
+label = "macro_brackets";
+#binding-cells = <0>;
+bindings = <&kp LBKT>, <&kp RBKT>, <&kp LEFT>;
+};
+macro_kinesis: macro_kinesis{
+compatible = "zmk,behavior-macro";
+label = "macro_kinesis";
+#binding-cells = <0>;
+bindings = <&kp LS(K)>, <&kp I>, <&kp N>, <&kp E>, <&kp S>, <&kp I>, <&kp S>;
+};
