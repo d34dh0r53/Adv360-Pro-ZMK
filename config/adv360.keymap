@@ -27,6 +27,7 @@
             tapping-term-ms = <195>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
+
             quick-tap-ms = <175>;
             require-prior-idle-ms = <125>;
         };
@@ -38,6 +39,7 @@
             tapping-term-ms = <240>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
+
             quick-tap-ms = <175>;
             require-prior-idle-ms = <125>;
         };
@@ -46,7 +48,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE";
             #binding-cells = <0>;
-            bindings = <&kp ENTER>, <&to 0>;
+            bindings = <&kp Z>, <&kp ESCAPE>;
         };
 
         hp: hold_preferred {
@@ -56,6 +58,7 @@
             tapping-term-ms = <220>;
             flavor = "hold-preferred";
             bindings = <&kp>, <&kp>;
+
             quick-tap-ms = <175>;
             require-prior-idle-ms = <125>;
         };
@@ -64,6 +67,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "layer_hold";
             bindings = <&mo>, <&kp>;
+
             flavor = "tap-preferred";
             #binding-cells = <2>;
             quick-tap-ms = <175>;
@@ -111,7 +115,7 @@
 &none  &none       &none       &none        &none         &none  &none                                                                       &none          &none  &none         &none        &none       &none         &none
 &none  &kp Q       &kp W       &kp E        &kp R         &kp T  &kp LS(LG(C))                                                               &kp F12        &kp Y  &kp U         &kp I        &kp O       &kp P         &none
 &none  &hl LGUI A  &hl LALT S  &hm LCTRL D  &hm LSHIFT F  &kp G  &kp LS(LA(LC(LG(Z))))  &none      &none             &none      &none        &kp LG(ENTER)  &kp H  &hm RSHIFT J  &hm RCTRL K  &hm RALT L  &hm RGUI SQT  &none
-&none  &lh 3 Z     &kp X       &kp C        &kp V         &kp B                                    &none             &none                                  &kp N  &kp M         &kp COMMA    &kp DOT     &lh 3 SLASH   &none
+&none  &td         &kp X       &kp C        &kp V         &kp B                                    &none             &none                                  &kp N  &kp M         &kp COMMA    &kp DOT     &lh 3 SLASH   &none
 &none  &none       &none       &none        &none                &lh 1 BACKSPACE        &lh 2 TAB  &lh 4 ESCAPE      &lh 7 DEL  &lh 6 ENTER  &lh 5 SPACE           &none         &none        &none       &none         &none
             >;
 
@@ -130,10 +134,10 @@
 
         Mouse {
             bindings = <
-&trans  &trans    &trans    &trans     &trans     &trans  &trans                                            &trans     &trans  &trans          &trans        &trans           &trans     &trans
-&trans  &trans    &trans    &trans     &trans     &trans  &trans                                            &trans     &trans  &kp LG(V)       &kp LG(C)     &kp LG(X)        &kp LG(Z)  &trans
-&trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans  &trans  &trans  &trans      &trans     &trans     &trans     &trans  &trans          &trans        &trans           &trans     &trans
-&trans  &trans    &trans    &trans     &trans     &trans                  &trans      &trans                           &trans  &trans          &trans        &trans           &trans     &trans
+&trans  &trans    &trans    &trans     &trans     &trans  &trans                                            &trans     &trans            &trans          &trans        &trans           &trans     &trans
+&trans  &trans    &trans    &trans     &trans     &trans  &trans                                            &trans     &mwh SCROLL_UP    &kp LG(V)       &kp LG(C)     &kp LG(X)        &kp LG(Z)  &trans
+&trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans  &trans  &trans  &trans      &trans     &trans     &trans     &mmv MOVE_LEFT    &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans     &trans
+&trans  &trans    &trans    &trans     &trans     &trans                  &trans      &trans                           &mwh SCROLL_DOWN  &trans          &trans        &trans           &trans     &trans
 &trans  &trans    &trans    &trans     &trans             &trans  &trans  &trans      &mkp MCLK  &mkp LCLK  &mkp RCLK                    &trans          &trans        &trans           &trans     &trans
             >;
         };
