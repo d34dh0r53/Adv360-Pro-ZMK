@@ -18,24 +18,49 @@
 / {
     behaviors {
         #include "macros.dtsi"
-    #include "version.dtsi"
+        #include "version.dtsi"
+
+        hml: timeless_hrm_left {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TIMELESS_LEFT";
+            flavor = "balanced";
+            #binding-cells = <2>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <150>;
+            global-quick-tap;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-on-release;
+        };
+
+        hmls: timeless_hrm_left_shift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TIMELESS_LEFT_SHIFT";
+            flavor = "balanced";
+            #binding-cells = <2>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <50>;
+            global-quick-tap;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-on-release;
+        };
+        
+        tlh: timeless_layer_hold {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TIMELESS_LAYER_HOLD";
+            flavor = "balanced";
+            #binding-cells = <2>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <100>;
+            global-quick-tap;
+            bindings = <&mo>, <&kp>;
+            hold-trigger-on-release;
+        };
 
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
             tapping-term-ms = <195>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
-            quick-tap-ms = <175>;
-            require-prior-idle-ms = <125>;
-        };
-
-        hl: homerow_long {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_LONG";
-            #binding-cells = <2>;
-            tapping-term-ms = <240>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
             quick-tap-ms = <175>;
@@ -108,11 +133,11 @@
 
         Base {
             bindings = <
-&none  &none       &none       &none        &none         &none  &none                                                                       &none          &none  &none         &none        &none       &none         &none
-&none  &kp Q       &kp W       &kp E        &kp R         &kp T  &kp LS(LG(C))                                                               &kp F12        &kp Y  &kp U         &kp I        &kp O       &kp P         &none
-&none  &hl LGUI A  &hl LALT S  &hm LCTRL D  &hm LSHIFT F  &kp G  &kp LS(LA(LC(LG(Z))))  &none      &none             &none      &none        &kp LG(ENTER)  &kp H  &hm RSHIFT J  &hm RCTRL K  &hm RALT L  &hm RGUI SQT  &none
-&none  &td         &kp X       &kp C        &kp V         &kp B                                    &none             &none                                  &kp N  &kp M         &kp COMMA    &kp DOT     &lh 3 SLASH   &none
-&none  &none       &none       &none        &none                &lh 1 BACKSPACE        &lh 2 TAB  &lh 4 ESCAPE      &lh 7 DEL  &lh 6 ENTER  &lh 5 SPACE           &none         &none        &none       &none         &none
+&none  &none        &none        &none         &none          &none  &none                                                                       &none          &none  &none          &none         &none        &none          &none
+&none  &kp Q        &kp W        &kp E         &kp R          &kp T  &kp LS(LG(C))                                                               &kp F12        &kp Y  &kp U          &kp I         &kp O        &kp P          &none
+&none  &hml LGUI A  &hml LALT S  &hml LCTRL D  &hmls LSHIFT F  &kp G  &kp LS(LA(LC(LG(Z))))  &none      &none             &none      &none        &kp LG(ENTER)  &kp H  &hmls RSHIFT J  &hml RCTRL K  &hml RALT L  &hml RGUI SQT  &none
+&none  &td          &kp X        &kp C         &kp V          &kp B                                    &none             &none                                  &kp N  &kp M          &kp COMMA     &kp DOT      &lh 3 SLASH    &none
+&none  &none        &none        &none         &none                 &tlh 1 BACKSPACE        &tlh 2 TAB  &tlh 4 ESCAPE      &tlh 7 DEL  &tlh 6 ENTER  &tlh 5 SPACE           &none          &none         &none        &none          &none
             >;
 
             label = "Base";
@@ -154,7 +179,7 @@
 &trans  &trans    &trans    &trans     &trans     &trans  &trans                                                    &trans      &bl BL_TOG    &bl BL_DEC         &bl BL_INC       &bl BL_CYCLE        &trans  &trans
 &trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans  &trans  &trans  &trans      &trans      &trans            &trans      &kp C_REWIND  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_FAST_FORWARD  &trans  &trans
 &trans  &trans    &trans    &trans     &trans     &trans                  &trans      &trans                                    &kp C_SLEEP   &kp C_BRI_DEC      &kp C_BRI_INC    &ext_power EP_TOG   &trans  &trans
-&trans  &trans    &trans    &trans     &trans             &trans  &trans  &trans      &kp K_MUTE  &kp K_PLAY_PAUSE  &kp K_STOP                &trans             &trans           &trans              &trans  &trans
+&trans  &trans    &trans    &trans     &trans             &trans  &trans  &trans      &kp C_MUTE  &kp C_PLAY_PAUSE  &kp C_STOP                &trans             &trans           &trans              &trans  &trans
             >;
         };
 
